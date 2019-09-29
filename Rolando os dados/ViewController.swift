@@ -10,21 +10,25 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    
     @IBOutlet weak var label: UILabel!
     
-    @IBOutlet weak var imagemLeft: UIStackView!
+    @IBOutlet weak var imagemEsq: UIImageView!
     
-    @IBOutlet weak var imagemRigth: UIImageView!
-    
-   
-    
+    @IBOutlet weak var imagemDir: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
-    @IBAction func jogar(_ sender: UIButton) {
+    @IBAction func button(_ sender: UIButton) {
+        
+        label.text = "Hello Dice"
+        imagemEsq.image = UIImage(named: "Dice2")
+        imagemDir.image = UIImage(named: "Dice1")
     }
     
-}
+    }
+    
+
 

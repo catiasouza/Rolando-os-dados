@@ -15,35 +15,59 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Dice2" translatesAutoresizingMaskIntoConstraints="NO" id="ezL-rx-vx1">
-                                <rect key="frame" x="66" y="230" width="99" height="98.000000000000028"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="table" translatesAutoresizingMaskIntoConstraints="NO" id="FhR-5W-V51">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Dice1" translatesAutoresizingMaskIntoConstraints="NO" id="l1C-c2-PDX">
-                                <rect key="frame" x="255" y="230" width="99" height="98.000000000000028"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="A soma é:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CyJ-Hz-qM0">
-                                <rect key="frame" x="147" y="115" width="136" height="28"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5vO-zt-nwe">
-                                <rect key="frame" x="147" y="543" width="122" height="55"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                                <state key="normal" title="Jogar">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="2zG-6o-pKU">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A soma é:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CyJ-Hz-qM0">
+                                        <rect key="frame" x="152" y="0.0" width="110.5" height="31.5"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="Mco-a0-M8y">
+                                        <rect key="frame" x="0.0" y="81.5" width="414" height="196"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="Dice2" translatesAutoresizingMaskIntoConstraints="NO" id="ezL-rx-vx1">
+                                                <rect key="frame" x="0.0" y="0.0" width="176" height="196"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="Dice1" translatesAutoresizingMaskIntoConstraints="NO" id="l1C-c2-PDX">
+                                                <rect key="frame" x="216" y="0.0" width="198" height="196"/>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5vO-zt-nwe">
+                                        <rect key="frame" x="175" y="327.5" width="64" height="490.5"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                        <state key="normal" title="Jogar">
+                                            <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="button:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6kj-QS-x6u"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2zG-6o-pKU" secondAttribute="trailing" id="0hO-s8-6op"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="2zG-6o-pKU" secondAttribute="bottom" id="CtV-ZA-cG7"/>
+                            <constraint firstAttribute="trailing" secondItem="FhR-5W-V51" secondAttribute="trailing" id="D4Q-62-ZG6"/>
+                            <constraint firstItem="FhR-5W-V51" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="N7r-az-31W"/>
+                            <constraint firstItem="FhR-5W-V51" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Nx8-ei-Q2G"/>
+                            <constraint firstAttribute="bottom" secondItem="FhR-5W-V51" secondAttribute="bottom" id="a0f-Fa-VvG"/>
+                            <constraint firstItem="2zG-6o-pKU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="fnR-Zb-web"/>
+                            <constraint firstItem="2zG-6o-pKU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="qhg-7Y-Yih"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="imagemRigth" destination="ezL-rx-vx1" id="rVm-jb-Pnw"/>
+                        <outlet property="imagemDir" destination="l1C-c2-PDX" id="jdo-IB-4YR"/>
+                        <outlet property="imagemEsq" destination="ezL-rx-vx1" id="dLm-G3-r4c"/>
+                        <outlet property="label" destination="CyJ-Hz-qM0" id="u1Q-fE-EXB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -54,5 +78,6 @@
     <resources>
         <image name="Dice1" width="99" height="98"/>
         <image name="Dice2" width="99" height="98"/>
+        <image name="table" width="414" height="736"/>
     </resources>
 </document>
