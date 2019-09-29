@@ -16,14 +16,15 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var imagemRigth: UIImageView!
     
-    @IBAction func jogar(_ sender: Any) {
-    }
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func jogar(_ sender: UIButton) {
+    }
+    
 }
 
