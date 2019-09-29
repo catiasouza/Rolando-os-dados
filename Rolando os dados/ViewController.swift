@@ -23,9 +23,13 @@ class ViewController: UIViewController {
 
     @IBAction func button(_ sender: UIButton) {
         
-        label.text = "Hello Dice"
-        imagemEsq.image = UIImage(named: "Dice2")
-        imagemDir.image = UIImage(named: "Dice1")
+        let numberOne = arc4random_uniform(6) + 1 // adicionando imagem aleatoria
+        let numberTwo = arc4random_uniform(6) + 1
+        label.text = "A soma é: \(numberOne + numberTwo)"
+        imagemEsq.image = UIImage(named: "Dice\(numberOne)")
+        imagemDir.image = UIImage(named: "Dice\(numberTwo)")
+        
+        
     }
     
     }
